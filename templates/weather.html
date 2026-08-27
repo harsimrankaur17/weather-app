@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='weather.css') }}">
+
+</head>
+
+<body>
+
+    <main>
+
+        <h1 class="main">
+            Your city's weather at your fingertips
+        </h1>
+
+        <div class="cities">
+
+            <h2>
+                <button id="delhiButton">Delhi</button>
+                <div id="delhiWeather"></div>
+            </h2>
+
+            <h2>
+                <button id="londonButton">London</button>
+                <div id="londonWeather"></div>
+            </h2>
+
+            <h2>
+                <button id="newYorkButton">New York City</button>
+                <div id="newYorkWeather"></div>
+            </h2>
+
+        </div>
+
+
+        <h1>
+            Want to check your city's weather?
+        </h1>
+
+        <form id="weatherForm">
+
+            <label for="city">City</label>
+
+            <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="e.g., New York"
+                required>
+
+            <button id="checkButton" type="submit">
+                Check!
+            </button>
+
+        </form>
+
+
+        <!-- Weather for the user's searched city will appear here -->
+
+        <div id="userWeather"></div>
+
+
+        <!-- JavaScript file -->
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    </main>
+
+</body>
+
+</html>
